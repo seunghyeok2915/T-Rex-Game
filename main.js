@@ -63,6 +63,9 @@ function Update() {
         if (dino.y < 200) {
             dino.y++;
         }
+        else {
+            canJump = true;
+        }
     }
     if (jumpTimer > 60) {
         jump = false;
@@ -89,9 +92,10 @@ function CollsionCheck(dino, cactus) {
 
 
 var jump = false;
-
+var canJump = true;
 document.addEventListener('keydown', function (e) {
-    if (e.code === 'Space') {
+    if (e.code === 'Space' && canJump) {
         jump = true;
+        canJump = false;
     }
 })
