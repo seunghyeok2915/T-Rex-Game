@@ -11,20 +11,27 @@ var dino = {
     height: 50,
     draw() {
         ctx.fillStyle = 'green';
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        //ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.drawImage(img2, this.x, this.y - 50, 80, 100);
     }
 }
+var img2 = new Image();
+img2.src = 'ninja.png';
+
+var img1 = new Image();
+img1.src = 'Arrow.png';
 
 class Cactus {
     constructor() {
         this.x = 500;
         this.y = 200;
         this.width = 50;
-        this.height = 50;
+        this.height = 40;
     }
     draw() {
         ctx.fillStyle = 'red';
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        //ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.drawImage(img1, this.x, this.y, 100, 50);
     }
 }
 
